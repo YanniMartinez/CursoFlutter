@@ -1,4 +1,5 @@
-import 'package:basic_concepts/presentation/screens/counter/counter_screen.dart';
+import 'package:basic_concepts/presentation/screens/counter/counter_functions_screen.dart';
+//import 'package:basic_concepts/presentation/screens/counter/counter_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,6 +19,6 @@ class MyApp extends StatelessWidget {
           colorSchemeSeed: Colors.blue
         ),
         //El hijo debe ir al final segun las buenas practicas
-        home: CounterScreen());
+        home: CounterFunctionsScreen());
   }
 }
