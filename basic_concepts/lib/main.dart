@@ -13,6 +13,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false, //Quita el banner de debug
+        theme: ThemeData(
+          useMaterial3: true, //habilita todos los widgets del material 3
+          colorSchemeSeed: Colors.blue
+        ),
+        //El hijo debe ir al final segun las buenas practicas
         home: CounterScreen());
   }
 }
