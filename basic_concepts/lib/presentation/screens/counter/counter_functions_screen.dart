@@ -40,13 +40,41 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          clickCounter += 1;
-          setState(() {}); //Esto renderiza el widget
-        },
-        child: Icon(Icons.plus_one),
-      ),
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            shape: StadiumBorder(), //Lo hace circular
+            onPressed: () {
+              clickCounter ++;
+              setState(() {}); //Esto renderiza el widget
+            },
+            child: Icon(Icons.refresh_outlined),
+          ),
+
+          SizedBox(height: 10),
+
+          FloatingActionButton(
+            shape: StadiumBorder(),
+            onPressed: () {
+              clickCounter ++;
+              setState(() {}); //Esto renderiza el widget
+            },
+            child: Icon(Icons.plus_one),
+          ),
+
+          SizedBox(height: 10),
+
+          FloatingActionButton(
+            shape: StadiumBorder(),
+            onPressed: () {
+              clickCounter --;
+              setState(() {}); //Esto renderiza el widget
+            },
+            child: Icon(Icons.exposure_minus_1),
+          ),
+        ],
+      )
     );
   }
 }
